@@ -17,7 +17,7 @@ function* getProducts(action: { type: string }) {
   try {
     yield console.log("Request inside getProducts saga:", action);
     const response: Product[] = yield getRequest<Product[]>(
-      "https://api.escuelajs.co/api/v1/products"
+      "https://dummyjson.com/products?limit=50"
     );
     if (!response) {
       yield put(getProductsFailed({ error: "Unable to load product" }));

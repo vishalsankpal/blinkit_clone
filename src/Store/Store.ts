@@ -1,8 +1,8 @@
 // https://api.escuelajs.co/api/v1/products
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
-import getProductsAction from "../redux/products/products.Saga";
-import productSlice from "../redux/products/productSlice";
+import getProductsAction from "../Pages/Home/products.Saga";
+import productSlice from "../Pages/Home/productSlice";
 const sagaMiddleware = createSagaMiddleware();
 const store = configureStore({
   reducer: {
