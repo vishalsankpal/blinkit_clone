@@ -23,6 +23,7 @@ const productSlice = createSlice({
       console.log("getproduct Success:", action);
       state.isLoading = false;
       state.data = action.payload.results;
+      console.log(state.data);
       state.error = null;
     },
     getProductsFailed: (state, action: PayloadAction<{ error: string }>) => {
