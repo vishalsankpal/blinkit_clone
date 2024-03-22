@@ -9,6 +9,7 @@ import { getCategoryList } from "./CategoryRedux/categoryListSlice";
 import CategoryCard from "../../Components/Organisms/CategoryCard";
 import Header from "../../Components/Organisms/Header/Header";
 import Footer from "../../Components/Organisms/Footer/Footer";
+import { Link } from "react-router-dom";
 const Home = (): JSX.Element => {
   const [mobilesLaptop, setMobilesLaptop] = useState<[] | null>([]);
   const [ladies, setLadies] = useState<[] | null>([]);
@@ -63,7 +64,7 @@ const Home = (): JSX.Element => {
       <BodyWrapper>
         <div className="flex justify-between py-4">
           <CategoryTitle>Mobiles & Laptops</CategoryTitle>
-          <button>see all</button>
+          <Link to={`/categoryList/smartphones`}>See all</Link>
         </div>
         <div className="slider-container">
           <SliderWrapper>
@@ -76,7 +77,7 @@ const Home = (): JSX.Element => {
       <BodyWrapper>
         <div className="flex justify-between py-4">
           <CategoryTitle>Womans</CategoryTitle>
-          <button>see all</button>
+          <Link to={`/categoryList/womens-dresses`}>See all</Link>
         </div>
         <div className="slider-container">
           <SliderWrapper>
@@ -89,7 +90,7 @@ const Home = (): JSX.Element => {
       <BodyWrapper>
         <div className="flex justify-between py-4">
           <CategoryTitle>Home</CategoryTitle>
-          <button>see all</button>
+          <Link to={`/categoryList/furniture`}>See all</Link>
         </div>
         <div className="slider-container">
           <SliderWrapper>
