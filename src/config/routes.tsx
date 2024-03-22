@@ -2,7 +2,7 @@ import React, { ReactElement, Suspense } from "react";
 import Header from "../Components/Organisms/Header/Header";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Footer from "../Components/Organisms/Footer/Footer";
-import CategoryProductList from "../Pages/CategoryProductList/CategoryProductList.Layout";
+//import CategoryProductList from "../Pages/CategoryProductList/CategoryProductList.Layout";
 // import Home from "../Pages/Home/Home.layout";
 
 const Home = React.lazy(() => import("../Pages/Home/Home.layout"));

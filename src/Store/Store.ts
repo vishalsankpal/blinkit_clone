@@ -5,15 +5,10 @@ import reducer from "./rootReducer";
 import rootSaga from "./rootSaga";
 const sagaMiddleware = createSagaMiddleware();
 const store = configureStore({
-  // reducer: {
-  //   products: productSlice,
-  //   categoryList: categoryListSlice,
-  // },
   reducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ thunk: false }).concat(sagaMiddleware),
 });
-// sagaMiddleware.run(getProductsAction, getCategoryListAction);
 sagaMiddleware.run(rootSaga);
 export default store;
 // Infer the `RootState` and `AppDispatch` types from the store itself
