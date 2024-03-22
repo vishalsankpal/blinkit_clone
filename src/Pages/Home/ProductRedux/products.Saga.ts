@@ -1,6 +1,6 @@
 import { put, takeLatest } from "redux-saga/effects";
 import { getProductsSuccess, getProductsFailed } from "./productSlice";
-import { getRequest } from "../../services/http.service";
+import { getRequest } from "../../../services/http.service";
 
 interface Product {
   // Define the structure of your product here
