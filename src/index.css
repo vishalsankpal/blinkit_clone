@@ -50,6 +50,8 @@
   --gray-900-rgb: 105, 105, 105;
   --grey-200-rgb: 31, 31, 31;
   --grey-100-rgb: 28, 28, 28;
+  /* green */
+  --green-400-rgb: 146, 206, 116;
 }
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 html {

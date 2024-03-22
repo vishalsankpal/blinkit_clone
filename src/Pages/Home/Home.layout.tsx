@@ -1,22 +1,27 @@
 import { useAppSelector, useAppDispatch } from "../../Hooks/hooks";
 import { useEffect, useState } from "react";
-import { getProducts } from "./productSlice";
+import { getProducts } from "./ProductRedux/productSlice";
 import BodyWrapper from "../../Components/Templates/BodyWrapper";
 import SliderCard from "../../Components/Organisms/SliderCard";
 import CategoryTitle from "../../Components/Atom/CategoryTitle";
 import SliderWrapper from "../../Components/Templates/SliderWrapper";
+import { getCategoryList } from "./CategoryRedux/categoryListSlice";
+import CategoryCard from "../../Components/Organisms/CategoryCard";
+import Header from "../../Components/Organisms/Header/Header";
+import Footer from "../../Components/Organisms/Footer/Footer";
 const Home = (): JSX.Element => {
   const [mobilesLaptop, setMobilesLaptop] = useState<[] | null>([]);
   const [ladies, setLadies] = useState<[] | null>([]);
   const [home, setHome] = useState<[] | null>([]);
   const products = useAppSelector((state) => state.products);
+  const categoryList = useAppSelector((state) => state.categoryList.data);
   const dispatch = useAppDispatch();
   console.log(products);
   useEffect(() => {
     dispatch(getProducts());
+    dispatch(getCategoryList());
   }, [dispatch]);
   useEffect(() => {
-    console.log("product", products?.data?.products);
     setHome(
       products?.data?.products.filter(
         (item) =>
@@ -37,19 +42,24 @@ const Home = (): JSX.Element => {
         (item) => item.category === "smartphones" || item.category === "laptops"
       )
     );
-    console.log(
-      products?.data?.products?.filter(
-        (item) => item.category === "smartphones" || item.category === "laptops"
-      )
-    );
+    // console.log(
+    //   products?.data?.products?.filter(
+    //     (item) => item.category === "smartphones" || item.category === "laptops"
+    //   )
+    // );
   }, [products]);
 
   return (
     <div>
-      Home
       <div>Banner</div>
       <div>ads</div>
-      <div>Categories</div>
+      <BodyWrapper>
+        <div className="grid grid-cols-10 gap-2.5">
+          {categoryList?.map((item, i) => (
+            <CategoryCard key={i}>{item}</CategoryCard>
+          ))}
+        </div>
+      </BodyWrapper>
       <BodyWrapper>
         <div className="flex justify-between py-4">
           <CategoryTitle>Mobiles & Laptops</CategoryTitle>
