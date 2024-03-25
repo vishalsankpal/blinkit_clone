@@ -7,8 +7,6 @@ import CategoryTitle from "../../Components/Atom/CategoryTitle";
 import SliderWrapper from "../../Components/Templates/SliderWrapper";
 import { getCategoryList } from "./CategoryRedux/categoryListSlice";
 import CategoryCard from "../../Components/Organisms/CategoryCard";
-import Header from "../../Components/Organisms/Header/Header";
-import Footer from "../../Components/Organisms/Footer/Footer";
 import { Link } from "react-router-dom";
 const Home = (): JSX.Element => {
   const [mobilesLaptop, setMobilesLaptop] = useState<[] | null>([]);

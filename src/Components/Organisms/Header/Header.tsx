@@ -158,7 +158,6 @@ const AccountContainer = styled.div`
   font-size: 18px;
   font-weight: 400;
   color: rgb(54, 54, 54);
-  font-family: Okra-Regular;
   transition: font-size 0.5s ease 0s;
   @media only screen and (min-width: 1260px) {
     width: 162px;
@@ -190,6 +189,5 @@ const CartButton = styled.div`
   p {
     font-size: 14px;
     color: rgb(255, 255, 255);
-    font-family: Okra-Bold;
   }
 `;
