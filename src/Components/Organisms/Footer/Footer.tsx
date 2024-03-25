@@ -99,7 +99,6 @@ const FooterContainer = styled.div`
 `;
 
 const FooterTitle = styled.h4`
-  font-family: Okra;
   font-weight: 600;
   color: rgb(0, 0, 0);
   font-size: 18px;

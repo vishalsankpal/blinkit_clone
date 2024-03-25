@@ -1,4 +1,4 @@
-import React, { ReactElement, Suspense } from "react";
+import React, { Suspense } from "react";
 import Header from "../Components/Organisms/Header/Header";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Footer from "../Components/Organisms/Footer/Footer";
