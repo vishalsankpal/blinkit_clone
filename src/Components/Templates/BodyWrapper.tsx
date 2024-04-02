@@ -1,5 +1,9 @@
 import Styled from "styled-components";
-const BodyWrapper = ({ children }) => {
+import { ReactNode } from "react";
+interface Props {
+  children?: ReactNode;
+}
+const BodyWrapper = ({ children }: Props) => {
   return <BodyContainer>{children}</BodyContainer>;
 };
 

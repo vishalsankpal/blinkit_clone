@@ -1,5 +1,9 @@
 import Slider from "react-slick";
-const SliderWrapper = ({ children }) => {
+import { ReactNode } from "react";
+interface Props {
+  children?: ReactNode;
+}
+const SliderWrapper = ({ children }: Props) => {
   const settings = {
     dots: false,
     infinite: false,

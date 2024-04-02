@@ -1,10 +1,13 @@
 import "./App.css";
 import RoutesConfig from "./config/routes";
+import AuthContextProvider from "./Context/AuthContext";
 
 function App() {
   return (
     <>
-      <RoutesConfig />
+      <AuthContextProvider>
+        <RoutesConfig />
+      </AuthContextProvider>
     </>
   );
 }
