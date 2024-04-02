@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-const CategoryCard = ({ children }) => {
+import { ReactNode } from "react";
+interface Props {
+  children?: ReactNode;
+}
+const CategoryCard = ({ children }: Props) => {
   return (
     <CategoryCardWrapper>
       <Link to={`/categoryList/${children}`}>

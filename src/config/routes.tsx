@@ -13,7 +13,11 @@ const CategoryProductList = React.lazy(
   () => import("../Pages/CategoryProductList/CategoryProductList.Layout")
 );
 // remaine will add
-export const routesMap = {
+interface RoutesMap {
+  [key: string]: string;
+}
+
+export const routesMap: RoutesMap = {
   root: "/",
   about: "/about",
   careers: "/careers",

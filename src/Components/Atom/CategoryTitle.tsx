@@ -1,6 +1,9 @@
 import styled from "styled-components";
-
-const CategoryTitle = ({ children }) => {
+import { ReactNode } from "react";
+interface Props {
+  children?: ReactNode;
+}
+const CategoryTitle = ({ children }: Props) => {
   return <Title>{children}</Title>;
 };
 
